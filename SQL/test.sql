@@ -1,0 +1,1 @@
+select * from article where rootid =1 order by pdate asc 
