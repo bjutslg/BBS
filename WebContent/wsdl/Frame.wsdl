@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://awt.java" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://awt.java" xmlns:intf="http://awt.java" xmlns:tns1="http://accessibility.javax" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://awt.java" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://accessibility.javax"/>
+   <import namespace="http://xml.apache.org/xml-soap"/>
+   <element name="remove">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:anyType"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeResponse">
+    <complexType/>
+   </element>
+   <element name="getState">
+    <complexType/>
+   </element>
+   <element name="getStateResponse">
+    <complexType>
+     <sequence>
+      <element name="getStateReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setMenuBar">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:anyType"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setMenuBarResponse">
+    <complexType/>
+   </element>
+   <element name="setState">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setStateResponse">
+    <complexType/>
+   </element>
+   <element name="setResizable">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setResizableResponse">
+    <complexType/>
+   </element>
+   <element name="getMenuBar">
+    <complexType/>
+   </element>
+   <element name="getMenuBarResponse">
+    <complexType>
+     <sequence>
+      <element name="getMenuBarReturn" type="impl:MenuBar"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setBackground">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:anyType"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setBackgroundResponse">
+    <complexType/>
+   </element>
+   <element name="setCursor">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setCursorResponse">
+    <complexType/>
+   </element>
+   <element name="setTitle">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setTitleResponse">
+    <complexType/>
+   </element>
+   <element name="isResizable">
+    <complexType/>
+   </element>
+   <element name="isResizableResponse">
+    <complexType>
+     <sequence>
+      <element name="isResizableReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addNotify">
+    <complexType/>
+   </element>
+   <element name="addNotifyResponse">
+    <complexType/>
+   </element>
+   <element name="getAccessibleContext">
+    <complexType/>
+   </element>
+   <element name="getAccessibleContextResponse">
+    <complexType>
+     <sequence>
+      <element name="getAccessibleContextReturn" type="xsd:anyType"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getCursorType">
+    <complexType/>
+   </element>
+   <element name="getCursorTypeResponse">
+    <complexType>
+     <sequence>
+      <element name="getCursorTypeReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getExtendedState">
+    <complexType/>
+   </element>
+   <element name="getExtendedStateResponse">
+    <complexType>
+     <sequence>
+      <element name="getExtendedStateReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getFrames">
+    <complexType/>
+   </element>
+   <element name="getFramesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getFramesReturn" type="xsd:anyType"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getIconImage">
+    <complexType/>
+   </element>
+   <element name="getIconImageResponse">
+    <complexType>
+     <sequence>
+      <element name="getIconImageReturn" type="apachesoap:Image"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getMaximizedBounds">
+    <complexType/>
+   </element>
+   <element name="getMaximizedBoundsResponse">
+    <complexType>
+     <sequence>
+      <element name="getMaximizedBoundsReturn" type="xsd:anyType"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="isUndecorated">
+    <complexType/>
+   </element>
+   <element name="isUndecoratedResponse">
+    <complexType>
+     <sequence>
+      <element name="isUndecoratedReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeNotify">
+    <complexType/>
+   </element>
+   <element name="removeNotifyResponse">
+    <complexType/>
+   </element>
+   <element name="setExtendedState">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setExtendedStateResponse">
+    <complexType/>
+   </element>
+   <element name="setIconImage">
+    <complexType>
+     <sequence>
+      <element name="in0" type="apachesoap:Image"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setIconImageResponse">
+    <complexType/>
+   </element>
+   <element name="setMaximizedBounds">
+    <complexType>
+     <sequence>
+      <element name="in0" type="impl:Rectangle"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setMaximizedBoundsResponse">
+    <complexType/>
+   </element>
+   <element name="setOpacity">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:float"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setOpacityResponse">
+    <complexType/>
+   </element>
+   <element name="setShape">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:anyType"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setShapeResponse">
+    <complexType/>
+   </element>
+   <element name="setUndecorated">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setUndecoratedResponse">
+    <complexType/>
+   </element>
+   <element name="getTitle">
+    <complexType/>
+   </element>
+   <element name="getTitleResponse">
+    <complexType>
+     <sequence>
+      <element name="getTitleReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getFramesResponse">
+
+      <wsdl:part element="impl:getFramesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getExtendedStateRequest">
+
+      <wsdl:part element="impl:getExtendedState" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setExtendedStateResponse">
+
+      <wsdl:part element="impl:setExtendedStateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setBackgroundRequest">
+
+      <wsdl:part element="impl:setBackground" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAccessibleContextRequest">
+
+      <wsdl:part element="impl:getAccessibleContext" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setMenuBarResponse">
+
+      <wsdl:part element="impl:setMenuBarResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setShapeRequest">
+
+      <wsdl:part element="impl:setShape" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getStateRequest">
+
+      <wsdl:part element="impl:getState" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setStateResponse">
+
+      <wsdl:part element="impl:setStateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setStateRequest">
+
+      <wsdl:part element="impl:setState" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFramesRequest">
+
+      <wsdl:part element="impl:getFrames" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMaximizedBoundsRequest">
+
+      <wsdl:part element="impl:getMaximizedBounds" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setResizableResponse">
+
+      <wsdl:part element="impl:setResizableResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setMaximizedBoundsResponse">
+
+      <wsdl:part element="impl:setMaximizedBoundsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setTitleRequest">
+
+      <wsdl:part element="impl:setTitle" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setIconImageResponse">
+
+      <wsdl:part element="impl:setIconImageResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAccessibleContextResponse">
+
+      <wsdl:part element="impl:getAccessibleContextResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setOpacityResponse">
+
+      <wsdl:part element="impl:setOpacityResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMenuBarRequest">
+
+      <wsdl:part element="impl:getMenuBar" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setMenuBarRequest">
+
+      <wsdl:part element="impl:setMenuBar" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getStateResponse">
+
+      <wsdl:part element="impl:getStateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setResizableRequest">
+
+      <wsdl:part element="impl:setResizable" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getIconImageRequest">
+
+      <wsdl:part element="impl:getIconImage" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCursorTypeResponse">
+
+      <wsdl:part element="impl:getCursorTypeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMenuBarResponse">
+
+      <wsdl:part element="impl:getMenuBarResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeRequest">
+
+      <wsdl:part element="impl:remove" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isUndecoratedRequest">
+
+      <wsdl:part element="impl:isUndecorated" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isUndecoratedResponse">
+
+      <wsdl:part element="impl:isUndecoratedResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCursorRequest">
+
+      <wsdl:part element="impl:setCursor" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeNotifyResponse">
+
+      <wsdl:part element="impl:removeNotifyResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setIconImageRequest">
+
+      <wsdl:part element="impl:setIconImage" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getIconImageResponse">
+
+      <wsdl:part element="impl:getIconImageResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeNotifyRequest">
+
+      <wsdl:part element="impl:removeNotify" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMaximizedBoundsResponse">
+
+      <wsdl:part element="impl:getMaximizedBoundsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addNotifyRequest">
+
+      <wsdl:part element="impl:addNotify" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setExtendedStateRequest">
+
+      <wsdl:part element="impl:setExtendedState" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setUndecoratedRequest">
+
+      <wsdl:part element="impl:setUndecorated" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getCursorTypeRequest">
+
+      <wsdl:part element="impl:getCursorType" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setTitleResponse">
+
+      <wsdl:part element="impl:setTitleResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setMaximizedBoundsRequest">
+
+      <wsdl:part element="impl:setMaximizedBounds" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setOpacityRequest">
+
+      <wsdl:part element="impl:setOpacity" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setUndecoratedResponse">
+
+      <wsdl:part element="impl:setUndecoratedResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isResizableRequest">
+
+      <wsdl:part element="impl:isResizable" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setShapeResponse">
+
+      <wsdl:part element="impl:setShapeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTitleRequest">
+
+      <wsdl:part element="impl:getTitle" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getExtendedStateResponse">
+
+      <wsdl:part element="impl:getExtendedStateResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getTitleResponse">
+
+      <wsdl:part element="impl:getTitleResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeResponse">
+
+      <wsdl:part element="impl:removeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setBackgroundResponse">
+
+      <wsdl:part element="impl:setBackgroundResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setCursorResponse">
+
+      <wsdl:part element="impl:setCursorResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addNotifyResponse">
+
+      <wsdl:part element="impl:addNotifyResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="isResizableResponse">
+
+      <wsdl:part element="impl:isResizableResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Frame">
+
+      <wsdl:operation name="remove">
+
+         <wsdl:input message="impl:removeRequest" name="removeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:removeResponse" name="removeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getState">
+
+         <wsdl:input message="impl:getStateRequest" name="getStateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getStateResponse" name="getStateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setMenuBar">
+
+         <wsdl:input message="impl:setMenuBarRequest" name="setMenuBarRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setMenuBarResponse" name="setMenuBarResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setState">
+
+         <wsdl:input message="impl:setStateRequest" name="setStateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setStateResponse" name="setStateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setResizable">
+
+         <wsdl:input message="impl:setResizableRequest" name="setResizableRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setResizableResponse" name="setResizableResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMenuBar">
+
+         <wsdl:input message="impl:getMenuBarRequest" name="getMenuBarRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getMenuBarResponse" name="getMenuBarResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setBackground">
+
+         <wsdl:input message="impl:setBackgroundRequest" name="setBackgroundRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setBackgroundResponse" name="setBackgroundResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCursor">
+
+         <wsdl:input message="impl:setCursorRequest" name="setCursorRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setCursorResponse" name="setCursorResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setTitle">
+
+         <wsdl:input message="impl:setTitleRequest" name="setTitleRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setTitleResponse" name="setTitleResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isResizable">
+
+         <wsdl:input message="impl:isResizableRequest" name="isResizableRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:isResizableResponse" name="isResizableResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addNotify">
+
+         <wsdl:input message="impl:addNotifyRequest" name="addNotifyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addNotifyResponse" name="addNotifyResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAccessibleContext">
+
+         <wsdl:input message="impl:getAccessibleContextRequest" name="getAccessibleContextRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAccessibleContextResponse" name="getAccessibleContextResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCursorType">
+
+         <wsdl:input message="impl:getCursorTypeRequest" name="getCursorTypeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getCursorTypeResponse" name="getCursorTypeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getExtendedState">
+
+         <wsdl:input message="impl:getExtendedStateRequest" name="getExtendedStateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getExtendedStateResponse" name="getExtendedStateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFrames">
+
+         <wsdl:input message="impl:getFramesRequest" name="getFramesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getFramesResponse" name="getFramesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getIconImage">
+
+         <wsdl:input message="impl:getIconImageRequest" name="getIconImageRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getIconImageResponse" name="getIconImageResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMaximizedBounds">
+
+         <wsdl:input message="impl:getMaximizedBoundsRequest" name="getMaximizedBoundsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getMaximizedBoundsResponse" name="getMaximizedBoundsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isUndecorated">
+
+         <wsdl:input message="impl:isUndecoratedRequest" name="isUndecoratedRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:isUndecoratedResponse" name="isUndecoratedResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeNotify">
+
+         <wsdl:input message="impl:removeNotifyRequest" name="removeNotifyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:removeNotifyResponse" name="removeNotifyResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setExtendedState">
+
+         <wsdl:input message="impl:setExtendedStateRequest" name="setExtendedStateRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setExtendedStateResponse" name="setExtendedStateResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setIconImage">
+
+         <wsdl:input message="impl:setIconImageRequest" name="setIconImageRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setIconImageResponse" name="setIconImageResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setMaximizedBounds">
+
+         <wsdl:input message="impl:setMaximizedBoundsRequest" name="setMaximizedBoundsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setMaximizedBoundsResponse" name="setMaximizedBoundsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setOpacity">
+
+         <wsdl:input message="impl:setOpacityRequest" name="setOpacityRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setOpacityResponse" name="setOpacityResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setShape">
+
+         <wsdl:input message="impl:setShapeRequest" name="setShapeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setShapeResponse" name="setShapeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setUndecorated">
+
+         <wsdl:input message="impl:setUndecoratedRequest" name="setUndecoratedRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setUndecoratedResponse" name="setUndecoratedResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTitle">
+
+         <wsdl:input message="impl:getTitleRequest" name="getTitleRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getTitleResponse" name="getTitleResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="FrameSoapBinding" type="impl:Frame">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="remove">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getState">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getStateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getStateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setMenuBar">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setMenuBarRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setMenuBarResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setState">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setStateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setStateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setResizable">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setResizableRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setResizableResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMenuBar">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getMenuBarRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getMenuBarResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setBackground">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setBackgroundRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setBackgroundResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setCursor">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setCursorRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setCursorResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setTitle">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setTitleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setTitleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isResizable">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isResizableRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isResizableResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addNotify">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addNotifyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addNotifyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAccessibleContext">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAccessibleContextRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAccessibleContextResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getCursorType">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getCursorTypeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getCursorTypeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getExtendedState">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getExtendedStateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getExtendedStateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getFrames">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFramesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFramesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getIconImage">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getIconImageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getIconImageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMaximizedBounds">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getMaximizedBoundsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getMaximizedBoundsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="isUndecorated">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="isUndecoratedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="isUndecoratedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeNotify">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeNotifyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeNotifyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setExtendedState">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setExtendedStateRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setExtendedStateResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setIconImage">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setIconImageRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setIconImageResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setMaximizedBounds">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setMaximizedBoundsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setMaximizedBoundsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setOpacity">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setOpacityRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setOpacityResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setShape">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setShapeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setShapeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setUndecorated">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setUndecoratedRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setUndecoratedResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getTitle">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getTitleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getTitleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="FrameService">
+
+      <wsdl:port binding="impl:FrameSoapBinding" name="Frame">
+
+         <wsdlsoap:address location="http://localhost:8080/BBS/services/Frame"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
